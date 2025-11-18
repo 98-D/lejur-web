@@ -1,0 +1,8 @@
+// src/routes/app/reports/index.tsx
+import { createFileRoute, redirect } from '@tanstack/react-router'
+
+export const Route = createFileRoute('/app/reports/')({
+    beforeLoad: () => {
+        throw redirect({ to: '/app/reports/trial-balance' })
+    },
+})
