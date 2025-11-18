@@ -5,7 +5,6 @@ import {
     Button,
     Dialog,
     DialogTrigger,
-    Heading,
     Input,
     Label,
     ListBox,
