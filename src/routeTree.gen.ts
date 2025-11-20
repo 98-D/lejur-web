@@ -9,23 +9,25 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as AppRouteRouteImport } from './routes/app/route'
+import { Route as LogoutRouteImport } from './routes/logout'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as AuthRouteImport } from './routes/_auth'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as LearnMoreIndexRouteImport } from './routes/learn-more/index'
-import { Route as AppIndexRouteImport } from './routes/app/index'
-import { Route as AppThirdPartiesRouteImport } from './routes/app/third-parties'
-import { Route as AppReportsRouteImport } from './routes/app/reports'
-import { Route as AppLoginRouteImport } from './routes/app/login'
-import { Route as AppJournalRouteImport } from './routes/app/journal'
-import { Route as AppReportsIndexRouteImport } from './routes/app/reports/index'
-import { Route as AppReportsTrialBalanceRouteImport } from './routes/app/reports/trial-balance'
-import { Route as AppReportsIncomeStatementRouteImport } from './routes/app/reports/income-statement'
-import { Route as AppReportsGeneralLedgerRouteImport } from './routes/app/reports/general-ledger'
-import { Route as AppReportsBalanceSheetRouteImport } from './routes/app/reports/balance-sheet'
+import { Route as AuthDashboardRouteImport } from './routes/_auth/dashboard'
+import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
-const AppRouteRoute = AppRouteRouteImport.update({
-  id: '/app',
-  path: '/app',
+const LogoutRoute = LogoutRouteImport.update({
+  id: '/logout',
+  path: '/logout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/_auth',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -33,166 +35,84 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LearnMoreIndexRoute = LearnMoreIndexRouteImport.update({
-  id: '/learn-more/',
-  path: '/learn-more/',
+const AuthDashboardRoute = AuthDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AuthRoute,
+} as any)
+const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
+  id: '/api/auth/$',
+  path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
-} as any)
-const AppIndexRoute = AppIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => AppRouteRoute,
-} as any)
-const AppThirdPartiesRoute = AppThirdPartiesRouteImport.update({
-  id: '/third-parties',
-  path: '/third-parties',
-  getParentRoute: () => AppRouteRoute,
-} as any)
-const AppReportsRoute = AppReportsRouteImport.update({
-  id: '/reports',
-  path: '/reports',
-  getParentRoute: () => AppRouteRoute,
-} as any)
-const AppLoginRoute = AppLoginRouteImport.update({
-  id: '/login',
-  path: '/login',
-  getParentRoute: () => AppRouteRoute,
-} as any)
-const AppJournalRoute = AppJournalRouteImport.update({
-  id: '/journal',
-  path: '/journal',
-  getParentRoute: () => AppRouteRoute,
-} as any)
-const AppReportsIndexRoute = AppReportsIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => AppReportsRoute,
-} as any)
-const AppReportsTrialBalanceRoute = AppReportsTrialBalanceRouteImport.update({
-  id: '/trial-balance',
-  path: '/trial-balance',
-  getParentRoute: () => AppReportsRoute,
-} as any)
-const AppReportsIncomeStatementRoute =
-  AppReportsIncomeStatementRouteImport.update({
-    id: '/income-statement',
-    path: '/income-statement',
-    getParentRoute: () => AppReportsRoute,
-  } as any)
-const AppReportsGeneralLedgerRoute = AppReportsGeneralLedgerRouteImport.update({
-  id: '/general-ledger',
-  path: '/general-ledger',
-  getParentRoute: () => AppReportsRoute,
-} as any)
-const AppReportsBalanceSheetRoute = AppReportsBalanceSheetRouteImport.update({
-  id: '/balance-sheet',
-  path: '/balance-sheet',
-  getParentRoute: () => AppReportsRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/app': typeof AppRouteRouteWithChildren
-  '/app/journal': typeof AppJournalRoute
-  '/app/login': typeof AppLoginRoute
-  '/app/reports': typeof AppReportsRouteWithChildren
-  '/app/third-parties': typeof AppThirdPartiesRoute
-  '/app/': typeof AppIndexRoute
-  '/learn-more': typeof LearnMoreIndexRoute
-  '/app/reports/balance-sheet': typeof AppReportsBalanceSheetRoute
-  '/app/reports/general-ledger': typeof AppReportsGeneralLedgerRoute
-  '/app/reports/income-statement': typeof AppReportsIncomeStatementRoute
-  '/app/reports/trial-balance': typeof AppReportsTrialBalanceRoute
-  '/app/reports/': typeof AppReportsIndexRoute
+  '/login': typeof LoginRoute
+  '/logout': typeof LogoutRoute
+  '/dashboard': typeof AuthDashboardRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/app/journal': typeof AppJournalRoute
-  '/app/login': typeof AppLoginRoute
-  '/app/third-parties': typeof AppThirdPartiesRoute
-  '/app': typeof AppIndexRoute
-  '/learn-more': typeof LearnMoreIndexRoute
-  '/app/reports/balance-sheet': typeof AppReportsBalanceSheetRoute
-  '/app/reports/general-ledger': typeof AppReportsGeneralLedgerRoute
-  '/app/reports/income-statement': typeof AppReportsIncomeStatementRoute
-  '/app/reports/trial-balance': typeof AppReportsTrialBalanceRoute
-  '/app/reports': typeof AppReportsIndexRoute
+  '/login': typeof LoginRoute
+  '/logout': typeof LogoutRoute
+  '/dashboard': typeof AuthDashboardRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/app': typeof AppRouteRouteWithChildren
-  '/app/journal': typeof AppJournalRoute
-  '/app/login': typeof AppLoginRoute
-  '/app/reports': typeof AppReportsRouteWithChildren
-  '/app/third-parties': typeof AppThirdPartiesRoute
-  '/app/': typeof AppIndexRoute
-  '/learn-more/': typeof LearnMoreIndexRoute
-  '/app/reports/balance-sheet': typeof AppReportsBalanceSheetRoute
-  '/app/reports/general-ledger': typeof AppReportsGeneralLedgerRoute
-  '/app/reports/income-statement': typeof AppReportsIncomeStatementRoute
-  '/app/reports/trial-balance': typeof AppReportsTrialBalanceRoute
-  '/app/reports/': typeof AppReportsIndexRoute
+  '/_auth': typeof AuthRouteWithChildren
+  '/login': typeof LoginRoute
+  '/logout': typeof LogoutRoute
+  '/_auth/dashboard': typeof AuthDashboardRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/app'
-    | '/app/journal'
-    | '/app/login'
-    | '/app/reports'
-    | '/app/third-parties'
-    | '/app/'
-    | '/learn-more'
-    | '/app/reports/balance-sheet'
-    | '/app/reports/general-ledger'
-    | '/app/reports/income-statement'
-    | '/app/reports/trial-balance'
-    | '/app/reports/'
+  fullPaths: '/' | '/login' | '/logout' | '/dashboard' | '/api/auth/$'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/app/journal'
-    | '/app/login'
-    | '/app/third-parties'
-    | '/app'
-    | '/learn-more'
-    | '/app/reports/balance-sheet'
-    | '/app/reports/general-ledger'
-    | '/app/reports/income-statement'
-    | '/app/reports/trial-balance'
-    | '/app/reports'
+  to: '/' | '/login' | '/logout' | '/dashboard' | '/api/auth/$'
   id:
     | '__root__'
     | '/'
-    | '/app'
-    | '/app/journal'
-    | '/app/login'
-    | '/app/reports'
-    | '/app/third-parties'
-    | '/app/'
-    | '/learn-more/'
-    | '/app/reports/balance-sheet'
-    | '/app/reports/general-ledger'
-    | '/app/reports/income-statement'
-    | '/app/reports/trial-balance'
-    | '/app/reports/'
+    | '/_auth'
+    | '/login'
+    | '/logout'
+    | '/_auth/dashboard'
+    | '/api/auth/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AppRouteRoute: typeof AppRouteRouteWithChildren
-  LearnMoreIndexRoute: typeof LearnMoreIndexRoute
+  AuthRoute: typeof AuthRouteWithChildren
+  LoginRoute: typeof LoginRoute
+  LogoutRoute: typeof LogoutRoute
+  ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/app': {
-      id: '/app'
-      path: '/app'
-      fullPath: '/app'
-      preLoaderRoute: typeof AppRouteRouteImport
+    '/logout': {
+      id: '/logout'
+      path: '/logout'
+      fullPath: '/logout'
+      preLoaderRoute: typeof LogoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_auth': {
+      id: '/_auth'
+      path: ''
+      fullPath: ''
+      preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -202,130 +122,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/learn-more/': {
-      id: '/learn-more/'
-      path: '/learn-more'
-      fullPath: '/learn-more'
-      preLoaderRoute: typeof LearnMoreIndexRouteImport
+    '/_auth/dashboard': {
+      id: '/_auth/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof AuthDashboardRouteImport
+      parentRoute: typeof AuthRoute
+    }
+    '/api/auth/$': {
+      id: '/api/auth/$'
+      path: '/api/auth/$'
+      fullPath: '/api/auth/$'
+      preLoaderRoute: typeof ApiAuthSplatRouteImport
       parentRoute: typeof rootRouteImport
-    }
-    '/app/': {
-      id: '/app/'
-      path: '/'
-      fullPath: '/app/'
-      preLoaderRoute: typeof AppIndexRouteImport
-      parentRoute: typeof AppRouteRoute
-    }
-    '/app/third-parties': {
-      id: '/app/third-parties'
-      path: '/third-parties'
-      fullPath: '/app/third-parties'
-      preLoaderRoute: typeof AppThirdPartiesRouteImport
-      parentRoute: typeof AppRouteRoute
-    }
-    '/app/reports': {
-      id: '/app/reports'
-      path: '/reports'
-      fullPath: '/app/reports'
-      preLoaderRoute: typeof AppReportsRouteImport
-      parentRoute: typeof AppRouteRoute
-    }
-    '/app/login': {
-      id: '/app/login'
-      path: '/login'
-      fullPath: '/app/login'
-      preLoaderRoute: typeof AppLoginRouteImport
-      parentRoute: typeof AppRouteRoute
-    }
-    '/app/journal': {
-      id: '/app/journal'
-      path: '/journal'
-      fullPath: '/app/journal'
-      preLoaderRoute: typeof AppJournalRouteImport
-      parentRoute: typeof AppRouteRoute
-    }
-    '/app/reports/': {
-      id: '/app/reports/'
-      path: '/'
-      fullPath: '/app/reports/'
-      preLoaderRoute: typeof AppReportsIndexRouteImport
-      parentRoute: typeof AppReportsRoute
-    }
-    '/app/reports/trial-balance': {
-      id: '/app/reports/trial-balance'
-      path: '/trial-balance'
-      fullPath: '/app/reports/trial-balance'
-      preLoaderRoute: typeof AppReportsTrialBalanceRouteImport
-      parentRoute: typeof AppReportsRoute
-    }
-    '/app/reports/income-statement': {
-      id: '/app/reports/income-statement'
-      path: '/income-statement'
-      fullPath: '/app/reports/income-statement'
-      preLoaderRoute: typeof AppReportsIncomeStatementRouteImport
-      parentRoute: typeof AppReportsRoute
-    }
-    '/app/reports/general-ledger': {
-      id: '/app/reports/general-ledger'
-      path: '/general-ledger'
-      fullPath: '/app/reports/general-ledger'
-      preLoaderRoute: typeof AppReportsGeneralLedgerRouteImport
-      parentRoute: typeof AppReportsRoute
-    }
-    '/app/reports/balance-sheet': {
-      id: '/app/reports/balance-sheet'
-      path: '/balance-sheet'
-      fullPath: '/app/reports/balance-sheet'
-      preLoaderRoute: typeof AppReportsBalanceSheetRouteImport
-      parentRoute: typeof AppReportsRoute
     }
   }
 }
 
-interface AppReportsRouteChildren {
-  AppReportsBalanceSheetRoute: typeof AppReportsBalanceSheetRoute
-  AppReportsGeneralLedgerRoute: typeof AppReportsGeneralLedgerRoute
-  AppReportsIncomeStatementRoute: typeof AppReportsIncomeStatementRoute
-  AppReportsTrialBalanceRoute: typeof AppReportsTrialBalanceRoute
-  AppReportsIndexRoute: typeof AppReportsIndexRoute
+interface AuthRouteChildren {
+  AuthDashboardRoute: typeof AuthDashboardRoute
 }
 
-const AppReportsRouteChildren: AppReportsRouteChildren = {
-  AppReportsBalanceSheetRoute: AppReportsBalanceSheetRoute,
-  AppReportsGeneralLedgerRoute: AppReportsGeneralLedgerRoute,
-  AppReportsIncomeStatementRoute: AppReportsIncomeStatementRoute,
-  AppReportsTrialBalanceRoute: AppReportsTrialBalanceRoute,
-  AppReportsIndexRoute: AppReportsIndexRoute,
+const AuthRouteChildren: AuthRouteChildren = {
+  AuthDashboardRoute: AuthDashboardRoute,
 }
 
-const AppReportsRouteWithChildren = AppReportsRoute._addFileChildren(
-  AppReportsRouteChildren,
-)
-
-interface AppRouteRouteChildren {
-  AppJournalRoute: typeof AppJournalRoute
-  AppLoginRoute: typeof AppLoginRoute
-  AppReportsRoute: typeof AppReportsRouteWithChildren
-  AppThirdPartiesRoute: typeof AppThirdPartiesRoute
-  AppIndexRoute: typeof AppIndexRoute
-}
-
-const AppRouteRouteChildren: AppRouteRouteChildren = {
-  AppJournalRoute: AppJournalRoute,
-  AppLoginRoute: AppLoginRoute,
-  AppReportsRoute: AppReportsRouteWithChildren,
-  AppThirdPartiesRoute: AppThirdPartiesRoute,
-  AppIndexRoute: AppIndexRoute,
-}
-
-const AppRouteRouteWithChildren = AppRouteRoute._addFileChildren(
-  AppRouteRouteChildren,
-)
+const AuthRouteWithChildren = AuthRoute._addFileChildren(AuthRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AppRouteRoute: AppRouteRouteWithChildren,
-  LearnMoreIndexRoute: LearnMoreIndexRoute,
+  AuthRoute: AuthRouteWithChildren,
+  LoginRoute: LoginRoute,
+  LogoutRoute: LogoutRoute,
+  ApiAuthSplatRoute: ApiAuthSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

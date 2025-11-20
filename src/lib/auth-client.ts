@@ -1,8 +1,16 @@
-import { createAuthClient } from "better-auth/client";
-const authClient = createAuthClient();
+import {
+    createAuthClient
+} from "better-auth/react";
 
-const signIn = async () => {
-  const data = await authClient.signIn.social({
-    provider: "google",
-  });
-};
+
+export const authClient = createAuthClient({
+    baseURL: import.meta.env.VITE_BETTER_AUTH_URL ?? process.env.VITE_BETTER_AUTH_URL as string
+})
+
+export const {
+    signIn,
+    signOut,
+    signUp,
+    useSession,
+    getSession,     // imperative fetch
+} = authClient;

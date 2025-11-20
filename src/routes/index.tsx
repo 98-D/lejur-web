@@ -155,7 +155,7 @@ function HomePage() {
                 transition
               "
                         >
-                            Enter app
+                            Google Sign-in
                         </Link>
 
                         <Link
