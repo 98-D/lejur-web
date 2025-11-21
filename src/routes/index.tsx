@@ -192,7 +192,7 @@ function HomePage() {
         "
             >
         <span className="text-[9px] mr-20 tracking-[0.16em] uppercase text-black/35 dark:text-white/25">
-          2025 • Orion - v0.11
+          2025 • Build=0.14 • Release=ORION
         </span>
             </footer>
 
