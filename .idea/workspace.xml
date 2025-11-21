@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62259f0c-a759-47a4-97a3-c7dc00496bde" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/auth-server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GoogleSignInButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GoogleSignInButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/sign-in.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/_authenticated.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/_authenticated.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/_authenticated/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/_authenticated/dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/login.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="62259f0c-a759-47a4-97a3-c7dc00496bde" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,7 +117,7 @@
       <workItem from="1763591812609" duration="2257000" />
       <workItem from="1763657116669" duration="5440000" />
       <workItem from="1763746626970" duration="803000" />
-      <workItem from="1763747527913" duration="2808000" />
+      <workItem from="1763747527913" duration="3136000" />
     </task>
     <servers />
   </component>
