@@ -6,14 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="62259f0c-a759-47a4-97a3-c7dc00496bde" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-workspace.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-workspace.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/auth-server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GoogleSignInButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GoogleSignInButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/User.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/auth-client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/auth-client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/sign-in.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/_authenticated.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/_authenticated.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/_authenticated/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/_authenticated/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/login.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +125,7 @@
       <workItem from="1763591812609" duration="2257000" />
       <workItem from="1763657116669" duration="5440000" />
       <workItem from="1763746626970" duration="803000" />
-      <workItem from="1763747527913" duration="1083000" />
+      <workItem from="1763747527913" duration="2808000" />
     </task>
     <servers />
   </component>
