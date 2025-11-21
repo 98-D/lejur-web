@@ -5,41 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62259f0c-a759-47a4-97a3-c7dc00496bde" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/auth.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/GoogleSignInButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/User.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/sign-in.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/_auth.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/_auth/dashboard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/login.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/logout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth-schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/JournalEntryDialog.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/LejurMenu.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/NavBar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/TopNav.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/TransactionDialog.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db-collections/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-workspace.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-workspace.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GoogleSignInButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GoogleSignInButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/User.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/auth-client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/auth-client.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routeTree.gen.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routeTree.gen.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/app/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/app/journal.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/app/login.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/app/reports.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/app/reports/balance-sheet.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/app/reports/general-ledger.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/app/reports/income-statement.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/app/reports/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/app/reports/trial-balance.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/app/route.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/app/third-parties.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/learn-more/index.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +102,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.27397.92" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28238.10" />
       </set>
     </attachedChunks>
   </component>
@@ -151,7 +125,9 @@
       <workItem from="1763569299397" duration="538000" />
       <workItem from="1763569854702" duration="7567000" />
       <workItem from="1763591812609" duration="2257000" />
-      <workItem from="1763657116669" duration="3904000" />
+      <workItem from="1763657116669" duration="5440000" />
+      <workItem from="1763746626970" duration="803000" />
+      <workItem from="1763747527913" duration="1083000" />
     </task>
     <servers />
   </component>

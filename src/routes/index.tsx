@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import {GoogleSignInButton} from "@/components/GoogleSignInButton.tsx";
 
 export const Route = createFileRoute("/")({
     component: HomePage,
@@ -140,23 +141,12 @@ function HomePage() {
                     <p className="select-none max-w-md text-sm sm:text-base text-black/70 dark:text-white/55">
                         a modern accounting application
                     </p>
+                    <GoogleSignInButton>
 
+                    </GoogleSignInButton>
                     <div className="pr-15 pl-15 mt-4 w-full max-w-xs flex flex-col gap-3.5">
-                        <Link
-                            to="/app"
-                            className="
-                w-full inline-flex items-center justify-center
-                rounded-xl px-5 py-3 text-sm font-medium
-                bg-black text-white
-                dark:bg-white dark:text-black
-                border border-black/90 dark:border-white/90
-                hover:translate-y-[1px] hover:shadow-sm
-                active:translate-y-[2px] active:shadow-none
-                transition
-              "
-                        >
-                            Google Sign-in
-                        </Link>
+
+
 
                         <Link
                             to="/learn-more"
