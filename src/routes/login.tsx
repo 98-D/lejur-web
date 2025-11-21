@@ -1,5 +1,5 @@
 // src/routes/login.tsx
-import { createFileRoute, useRouter } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { authClient } from "@/lib/auth-client";
 import { GoogleSignInButton } from "@/components/GoogleSignInButton";
 
@@ -8,21 +8,15 @@ export const Route = createFileRoute("/login")({
 });
 
 function LoginPage() {
-    const router = useRouter();
+    // @ts-ignore
     const { redirect } = Route.useSearch() ?? {};
 
-    const handleSignIn = async () => {
-        await authClient.signIn.social({
-            provider: "google",
-        });
-
-        // Make TanStack re-run guards (so _authenticated sees fresh session)
-        await router.invalidate();
-
-        // Either go back where they wanted, or just to /dashboard
-        router.navigate({ to: (redirect as string) ?? "/dashboard" });
+    const handleSignIn = () => {
+        authClient.signIn.social({ provider: "google" });
+        // That's literally it. No redirect param, no replace, no nothing.
     };
 
+    // @ts-ignore
     return (
         <div className="min-h-screen flex items-center justify-center bg-neutral-950">
             <div className="w-full max-w-md rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6">

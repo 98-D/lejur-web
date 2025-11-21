@@ -1,21 +1,29 @@
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { db } from "@/db/index"; // your drizzle instance
-import { reactStartCookies } from "better-auth/react-start";
-import * as schema from "@/db/schema"
+import { db } from "@/db/index";
+import { reactStartCookies } from "better-auth/react-start"; // ← add this import
+
+import * as schema from "@/db/schema";
+import {replaceHistoryOnSuccess} from "@/lib/better-auth-replace-plugin.ts";
 
 export const auth = betterAuth({
-        socialProviders: {
-        google: { 
-            clientId: process.env.GOOGLE_CLIENT_ID as string, 
+    socialProviders: {
+        google: {
+            clientId: process.env.GOOGLE_CLIENT_ID as string,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-            prompt: "select_account consent", 
-        }}, 
+            prompt: "select_account consent",
+        },
+    },
     database: drizzleAdapter(db, {
         provider: "pg",
-        usePlural:true,
-        schema
-        // or "mysql", "sqlite"
+        usePlural: true,
+        schema,
     }),
-      plugins: [reactStartCookies()] // make sure this is the last plugin in the array
+
+    plugins: [
+
+        replaceHistoryOnSuccess(),   // ← put this first (or anywhere before the last one)
+        // Keep this as the very last plugin (required for cookie handling)
+        reactStartCookies(),
+    ],
 });

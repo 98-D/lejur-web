@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62259f0c-a759-47a4-97a3-c7dc00496bde" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/CurrentUserPill.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/better-auth-replace-plugin.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/_authenticated.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/_authenticated.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/login.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +122,7 @@
       <workItem from="1763591812609" duration="2257000" />
       <workItem from="1763657116669" duration="5440000" />
       <workItem from="1763746626970" duration="803000" />
-      <workItem from="1763747527913" duration="6193000" />
+      <workItem from="1763747527913" duration="8507000" />
     </task>
     <servers />
   </component>
