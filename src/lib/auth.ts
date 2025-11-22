@@ -19,7 +19,12 @@ export const auth = betterAuth({
         usePlural: true,
         schema,
     }),
-
+    session: {
+        cookieCache: {
+            enabled: true,
+            maxAge: 5 * 60, // Cache duration in seconds
+        },
+    },
     plugins: [
 
         replaceHistoryOnSuccess(),   // ← put this first (or anywhere before the last one)

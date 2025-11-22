@@ -12,7 +12,8 @@ export const replaceHistoryOnSuccess = (): BetterAuthPlugin => ({
                 // Throw TanStack redirect with replace: true
                 throw redirect({
                     to: redirectTo ?? "/dashboard",
-                    replace: true,          // ← this nukes /login from history
+                    replace: true,
+                     // ← this nukes /login from history
                 });
             }
         },

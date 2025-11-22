@@ -1,22 +1,42 @@
 // src/routes/login.tsx
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
+import { z } from "zod";
 import { authClient } from "@/lib/auth-client";
 import { GoogleSignInButton } from "@/components/GoogleSignInButton";
 
+
+const searchSchema = z.object({
+    redirect: z.string().optional(),
+});
+
 export const Route = createFileRoute("/login")({
+    validateSearch: searchSchema,
+
+    beforeLoad: async ({ context, search }) => {
+        const user = await context.queryClient.ensureQueryData();
+        if (user) {
+            throw redirect({
+                to: search.redirect ?? "/dashboard",
+                replace: true,
+            });
+        }
+    },
+
     component: LoginPage,
 });
 
 function LoginPage() {
-    // @ts-ignore
-    const { redirect } = Route.useSearch() ?? {};
+    const { redirect } = Route.useSearch();
 
     const handleSignIn = () => {
-        authClient.signIn.social({ provider: "google" });
-        // That's literally it. No redirect param, no replace, no nothing.
+        const callbackURL = redirect ?? "/dashboard";
+
+        authClient.signIn.social({
+            provider: "google",
+            callbackURL, // must be a string
+        });
     };
 
-    // @ts-ignore
     return (
         <div className="min-h-screen flex items-center justify-center bg-neutral-950">
             <div className="w-full max-w-md rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6">
